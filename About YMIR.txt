@@ -1,0 +1,71 @@
+
+
+
+	XXX   	XXX  XXX	 XXX  XXX  XXXXXXXXX
+	 XXX   XXX   XXXX       XXXX  XXX  XXXXXXXXXX
+	  XXX XXX    XXXXX     XXXXX  XXX  XXX     XXX
+	   XXXXX     XXXXXX   XXXXXX  XXX  XXX     XXX
+	    XXX      XXX XXX XXX XXX  XXX  XXXXXXXXXX
+	    XXX      XXX  XXXXX  XXX  XXX  XXXXXXXXX
+	    XXX      XXX   XXX   XXX  XXX  XXX    XXX
+	    XXX      XXX         XXX  XXX  XXX     XXX
+
+
+		v0.2
+
+#################################################################
+
+SYNTAX:
+
+IO:
+
+echo	x				-->	prints value, location or alias x to console.
+ask	x	to	a		-->	takes input from the user using the prompt value, location or alias x and stores it in address a
+
+
+FLOW CONTROL:
+
+goto	n				-->	jump to program line n
+jump	n				--> 	jump ahead or back n spaces
+wait	x				-->	pauses execution for x lots of 0.1 seconds
+
+
+VARIABLES:
+
+push	x	to	a		-->	stores value, location or alias x in address a - identical to a = x
+alias	a	as	s		-->	aliases address a with the name s
+string 	a	is	s		--> 	push string s to address a
+decr	a				-->	decrements address value
+incr	a				-->	increments address value
+
+
+OPERATIONS:
+
+a	=	x			-->	address a equals value, location or alias x
+a	=	x	+	y	-->	address a equals values, locations or aliases x and y added
+a	=	x	-	y	-->	address a equals values, locations or aliases x and y subtracted
+a	=	x	*	y	-->	address a equals values, locations or aliases x and y multiplied
+a	=	x	/	y	-->	address a equals values, locations or aliases x and y divided
+a	=	x	//	y	-->	address a equals values, locations or aliases x and y divided (quotient, whole number)
+a	=	x	%	y	-->	address a equals values, locations or aliases x and y divided (modulo, remainder)
+a	=	x	¬	y	-->	address a equals a random integer between values, locations or aliases x and y
+
+==					-->	equal to
+!=					-->	not equal to
+<					-->	greater than
+<=					-->	greater than or equal to
+>					-->	less than
+>=					-->	less than or equal to
+
+
+SELECTION:
+
+if	x	o	x		-->	tests values, locations and aliases x and y against operand o
+else					-->	syntactic sugar to locate conclusion of if subroutine
+
+
+LINE MARKER
+
+,					-->	move to next line when complete
+:					-->	loop back to if statement
+;					-->	end execution of program
